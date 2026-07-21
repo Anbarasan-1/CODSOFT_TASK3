@@ -1,0 +1,279 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #eef5ff, #dce8ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background:linear-gradient(135deg,#1b71c8,#b93089);
+}
+
+
+
+
+
+
+.calculator-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.calculator {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 28px;
+    padding: 26px;
+    box-shadow: 0 20px 50px rgba(49, 76, 140, 0.2);
+    backdrop-filter: blur(14px);
+    animation: fadeUp .6 ease;
+}
+
+
+
+
+.calculator-header {
+    text-align: center;
+    margin-bottom: 22px;
+}
+
+.calculator-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #24345c;
+    margin-bottom: 4px;
+}
+
+.calculator-header p {
+    font-size: 13px;
+    color: #7180a2;
+}
+
+
+
+
+.display {
+    min-height: 135px;
+    background: linear-gradient(135deg, #243b77, #3659b8);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.12);
+}
+
+.previous-operation {
+    width: 100%;
+    min-height: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.65);
+    text-align: right;
+    word-break: break-all;
+}
+
+.current-operation {
+    width: 100%;
+    font-size: 44px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: right;
+    line-height: 1.2;
+    word-break: break-all;
+}
+
+
+
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+}
+
+
+
+
+.btn {
+    height: 64px;
+    border: none;
+    border-radius: 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease,
+                background 0.2s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+
+
+
+.number-btn {
+    background: #ffffff;
+    color: #263557;
+    box-shadow: 0 8px 18px rgba(53, 75, 128, 0.1);
+}
+
+.number-btn:hover {
+    background: #f3f7ff;
+    box-shadow: 0 10px 22px rgba(53, 75, 128, 0.16);
+}
+
+
+
+
+.function-btn {
+    background: #eaf0ff;
+    color: #3152a3;
+}
+
+.function-btn:hover {
+    background: #dbe6ff;
+}
+
+
+
+
+.operator-btn {
+    background: #3659b8;
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(54, 89, 184, 0.25);
+}
+
+.operator-btn:hover {
+    background: #2e4fa9;
+    box-shadow: 0 10px 22px rgba(54, 89, 184, 0.32);
+}
+
+
+
+
+.equal-btn {
+    background: linear-gradient(135deg, #ff9a3d, #ff6b2c);
+    color: #ffffff;
+    box-shadow: 0 8px 18px rgba(255, 107, 44, 0.3);
+}
+
+.equal-btn:hover {
+    box-shadow: 0 10px 24px rgba(255, 107, 44, 0.4);
+}
+
+
+
+
+.zero-btn {
+    grid-column: span 2;
+}
+
+
+
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 14px;
+    }
+
+    .calculator {
+        max-width: 350px;
+        padding: 20px;
+        border-radius: 24px;
+    }
+
+    .calculator-header h1 {
+        font-size: 25px;
+    }
+
+    .display {
+        min-height: 105px;
+        padding: 18px;
+    }
+
+    .current-operation {
+        font-size: 32px;
+    }
+
+    .calculator-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        height: 57px;
+        border-radius: 16px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .calculator {
+        padding: 16px;
+    }
+
+    .display {
+        min-height: 95px;
+    }
+
+    .current-operation {
+        font-size: 29px;
+    }
+
+    .btn {
+        height: 52px;
+        font-size: 17px;
+    }
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}

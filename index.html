@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="calculator-container">
+
+        <section class="calculator">
+
+            <!-- Calculator Heading -->
+            <div class="calculator-header">
+                <h1>Calculator</h1>
+
+                <p>Simple and easy calculations</p>
+            </div>
+
+            <!-- Display Screen -->
+            <div class="display">
+
+                <div class="previous-operation" id="previousOperation"></div>
+
+                <div class="current-operation" id="currentOperation">0</div>
+
+            </div>
+
+            <!-- Calculator Buttons -->
+            <div class="calculator-buttons">
+
+                <button class="btn function-btn" data-action="clear">
+                    AC
+                </button>
+
+                <button class="btn function-btn" data-action="delete">
+                    DEL
+                </button>
+
+                <button class="btn function-btn" data-action="percentage">
+                    %
+                </button>
+
+                <button class="btn operator-btn" data-value="/">
+                    ÷
+                </button>
+
+                <button class="btn number-btn" data-value="7">
+                    7
+                </button>
+
+                <button class="btn number-btn" data-value="8">
+                    8
+                </button>
+
+                <button class="btn number-btn" data-value="9">
+                    9
+                </button>
+
+                <button class="btn operator-btn" data-value="*">
+                    ×
+                </button>
+
+                <button class="btn number-btn" data-value="4">
+                    4
+                </button>
+
+                <button class="btn number-btn" data-value="5">
+                    5
+                </button>
+
+                <button class="btn number-btn" data-value="6">
+                    6
+                </button>
+
+                <button class="btn operator-btn" data-value="-">
+                    −
+                </button>
+
+                <button class="btn number-btn" data-value="1">
+                    1
+                </button>
+
+                <button class="btn number-btn" data-value="2">
+                    2
+                </button>
+
+                <button class="btn number-btn" data-value="3">
+                    3
+                </button>
+
+                <button class="btn operator-btn" data-value="+">
+                    +
+                </button>
+
+                <button class="btn number-btn zero-btn" data-value="0">
+                    0
+                </button>
+
+                <button class="btn number-btn" data-value=".">
+                    .
+                </button>
+
+                <button class="btn equal-btn" data-action="calculate">
+                    =
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
